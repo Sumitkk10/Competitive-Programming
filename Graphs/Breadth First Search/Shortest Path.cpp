@@ -1,5 +1,3 @@
-he number of nodes which are at a distance of dis from them.
-
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
 #define ll long long int
