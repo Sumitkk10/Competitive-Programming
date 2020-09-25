@@ -1,4 +1,4 @@
-// Given an unwieghted graph and q queries and in each query given one nodes and dis, you need to return the number of nodes which are at a distance of dis from them.
+he number of nodes which are at a distance of dis from them.
 
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
