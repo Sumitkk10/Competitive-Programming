@@ -33,7 +33,7 @@ long long int MST(){
 		long long int u = e.second.first;
 		long long int v = e.second.second;
 		long long int cost = e.first;
-		if(component[u] != component[v]){
+		if(find(u) != find(v)){
 			++edge;
 			ans += cost;
 			merge(u, v);
