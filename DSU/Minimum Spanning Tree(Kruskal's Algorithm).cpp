@@ -52,6 +52,7 @@ int main(){
 	}
 	for(int i = 0; i <= n; ++i) 
 		component[i] = i;
+	sort(edges.begin(), edges.end());
 	cout << MST();
 	return 0;
 }
