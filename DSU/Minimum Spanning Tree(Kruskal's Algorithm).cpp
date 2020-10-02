@@ -27,14 +27,11 @@ void merge(long long int u, long long int v){
 }
 
 long long int MST(){
-	int edge = 0;
 	for(auto e : edges){
-		if(edge == n - 1) break;
 		long long int u = e.second.first;
 		long long int v = e.second.second;
 		long long int cost = e.first;
 		if(find(u) != find(v)){
-			++edge;
 			ans += cost;
 			merge(u, v);
 		}
