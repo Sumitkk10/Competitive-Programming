@@ -61,8 +61,11 @@ int main(){
 		else{ // update the ith index;
 			int i, x;
 			cin >> i >> x;
-			--i, x = x - a[i];
+			--i;
+			int y = x;
+			x = x - a[i];
 			update(1, 0, n - 1, i, x);
+			a[i] = y;
 		}
 	}
 	return 0;
