@@ -42,17 +42,15 @@ void update(int vertex, int l, int r, int idx, int x){
 
 int main(){
 	fast;	
-	int n;
-	cin >> n;
+	int n, q;
+	cin >> n >> q;
 	for(int i = 0; i < n; ++i)
 		cin >> a[i];
 	build(1, 0, n - 1);
-	int q;
-	cin >> q;
 	while(q--){
 		int which_type;
 		cin >> which_type;
-		if(which_type == 1){ // return the sum;
+		if(which_type == 2){ // return the sum;
 			int l, r;
 			cin >> l >> r;
 			--l, --r;
