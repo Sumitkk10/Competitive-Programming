@@ -18,14 +18,14 @@ void build(int vertex, int l, int r){
 	}
 }
 
-ll min_query(int vertex, int l, int r, int x, int y){
+ll max_query(int vertex, int l, int r, int x, int y){
 	if(r < x || l > y || l > r) 
 		return 0;
 	if(x <= l && r <= y)
 		return seg_tree[vertex];
 	int mid = (l + r) / 2;
-	long long int ans = min_query(2 * vertex, l, mid, x, y);
-	long long int ans1 = min_query((2 * vertex) + 1, mid + 1, r, x, y);
+	long long int ans = max_query(2 * vertex, l, mid, x, y);
+	long long int ans1 = max_query((2 * vertex) + 1, mid + 1, r, x, y);
 	return max(ans, ans1);
 }
 
@@ -56,7 +56,7 @@ int main(){
 			int x, y;
 			cin >> x >> y;
 			--x, --y;
-			cout << min_query(1, 0, n - 1, x, y) << '\n';
+			cout << max_query(1, 0, n - 1, x, y) << '\n';
 		}
 		else{
 			int x, y;
