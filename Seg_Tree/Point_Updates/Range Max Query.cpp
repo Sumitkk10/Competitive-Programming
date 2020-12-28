@@ -47,7 +47,7 @@ int main(){
 	cin >> n >> q;
 	for(int i = 0; i < n; ++i)
 		cin >> a[i];	
-	memset(seg_tree, INT_MAX, sizeof(seg_tree));
+	memset(seg_tree, 0, sizeof(seg_tree));
 	build(1, 0, n - 1);
 	while(q--){
 		int which_type;
