@@ -1,3 +1,5 @@
+// first create the next_occurence array and now just count the no of number from l to r whose next_occurencce is > r.
+
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
 using namespace std;
