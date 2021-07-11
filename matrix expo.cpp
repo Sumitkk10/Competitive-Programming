@@ -1,3 +1,12 @@
+
+// If we want to find the nth fibonacci num : 
+// Let M be (0 1, 1 1) matrix. It is M[2][2];
+// then find M^n using mat expo.
+// then multiply this matrix with (1, 1);
+// this will give a matrix ans[1][2] which will be nth and n+1th term of fibonacci series.
+
+// Be careful the sizes of matrix is not equal for the last multiplicaion :)
+
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
 #define ll long long int
