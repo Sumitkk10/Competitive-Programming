@@ -59,13 +59,4 @@ int main(){
     while(t--)
         solve();
     return 0;
-    // you should actually read the stuff at the bottom
 }
-/* stuff you should look for
-    * int overflow, array bounds
-    * special cases (n=1?)
-    * do smth instead of nothing and stay organized
-    * WRITE STUFF DOWN
-    * DON'T GET STUCK ON ONE APPROACH
-    * Read other problems if stuck on this one.
-*/
