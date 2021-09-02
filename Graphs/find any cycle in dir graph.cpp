@@ -1,3 +1,9 @@
+/*
+in directed graphs, for finding cycles we need coloring.
+but for undirected graphs, we can just use vis array.
+if you need to find all cycles(or SCC) use kosaraju's algo.
+*/
+
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
 #define ll long long int
