@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
-#define ll long long int
-#define ld long double
+#define int long long
 using namespace std;
 const int N = 1e6 + 5;
 const int MOD = 1e9 + 7;
@@ -18,14 +17,14 @@ void build(int vertex, int l, int r){
 	}
 }
 
-ll max_query(int vertex, int l, int r, int x, int y){
+int max_query(int vertex, int l, int r, int x, int y){
 	if(r < x || l > y || l > r) 
 		return 0;
 	if(x <= l && r <= y)
 		return seg_tree[vertex];
 	int mid = (l + r) / 2;
-	long long int ans = max_query(2 * vertex, l, mid, x, y);
-	long long int ans1 = max_query((2 * vertex) + 1, mid + 1, r, x, y);
+	int ans = max_query(2 * vertex, l, mid, x, y);
+	int ans1 = max_query((2 * vertex) + 1, mid + 1, r, x, y);
 	return max(ans, ans1);
 }
 
@@ -41,7 +40,7 @@ void update(int vertex, int l, int r, long long int idx, long long int x){
 	seg_tree[vertex] = max(seg_tree[2 * vertex], seg_tree[(2 * vertex) + 1]);
 }
 
-int main(){
+int32_t main(){
 	fast;	
 	int n, q;
 	cin >> n >> q;
