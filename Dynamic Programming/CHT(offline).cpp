@@ -18,10 +18,10 @@ bool cmp(line x, line y){
     return (x.m >= y.m);
 }
 
-long double intersection(line x, line y){
-    long double p = y.c - x.c;
-    long double q = x.m - y.m;
-    return (long double) p / q;
+bool check(line a, line b, line cc){
+    if(((b.c - a.c) * (a.m - cc.m)) > ((cc.c - a.c) * (a.m - b.m)))
+        return true;
+    return false;
 }
 
 void convex_hull(){
@@ -32,7 +32,7 @@ void convex_hull(){
     for(int j = 2; j < cur.size(); ++j){
         while(hull.size() > 1){
             line pre = hull.back(), par = hull[hull.size() - 2];
-            if(intersection(cur[j], par) <= intersection(pre, par))
+            if(check(par, pre, cur[j]))
                 hull.pop_back();
             else
                 break;
@@ -77,6 +77,7 @@ void solve(){
             else
                 low = mid + 1;
         }
+
         cout << hull[ans].m * x + hull[ans].c << "\n";
     }
 }
