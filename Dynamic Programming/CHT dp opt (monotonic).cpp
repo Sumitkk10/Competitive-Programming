@@ -24,10 +24,10 @@ struct line{
 };
 vector<line> hull;
 
-long double intersection(line x, line y){
-    long double p = y.c - x.c;
-    long double q = x.m - y.m;
-    return (long double) p / q;
+bool check(line a, line b, line cc){
+    if(((b.c - a.c) * (a.m - cc.m)) > ((cc.c - a.c) * (a.m - b.m)))
+        return true;
+    return false;
 }
 
 void add(int x, int y){
@@ -36,7 +36,7 @@ void add(int x, int y){
     cur.c = y;
     while(hull.size() > 1){
         line pre = hull.back(), par = hull[hull.size() - 2];
-        if(intersection(cur, par) <= intersection(pre, par))
+        if(check(par, pre, cur))
             hull.pop_back();
         else
             break;
