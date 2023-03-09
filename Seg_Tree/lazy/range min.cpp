@@ -8,6 +8,7 @@ const ll MOD = 1e9 + 7;
 ll n, a[N], q, lazy[4*N], val[4*N];
 
 void build(ll vertex, ll l, ll r){
+    lazy[vertex] = 0;
     if(l > r)
         return;
     if(l == r){
