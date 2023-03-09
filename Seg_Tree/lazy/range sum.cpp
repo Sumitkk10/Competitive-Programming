@@ -8,6 +8,7 @@ const int N = 1e6 + 5, MOD = 1e9 + 7;
 long long n, q, a[N], seg[4*N], lazy[4*N];
 
 void build(int vertex, int l, int r){
+	lazy[vertex] = 0;
 	if(r < l) return;
 	if(l == r){
 		seg[vertex] = a[l];
