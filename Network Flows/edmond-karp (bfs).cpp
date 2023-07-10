@@ -8,8 +8,8 @@
 #define S second
 #define pb push_back
 using namespace std;
-const int N = 1e3 + 5, MOD = 1e9 + 7;
-int n, m, cap[N][N];
+const int N = 1e6 + 5, MOD = 1e9 + 7;
+int n, m;
 pair<int, int> par[N];
 vector<pair<int, int> > g[N];
 vector<int> edges;
