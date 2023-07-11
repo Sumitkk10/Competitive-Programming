@@ -1,6 +1,6 @@
 // dinic's with scaling, taken from kactl
 // time complexity for max bipartite matching: O(E * sqrt(V))
-// general complexity for flow problems: O(V*V*E)
+// general complexity for flow problems: O(V*V*E), but with scaling here it is O(V*E*log(U)) where U is the max flow
 
 #include <bits/stdc++.h>
 #define fast ios_base::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL)
